@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<title>flex做列表元素</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		ul,li{
+			list-style:none;
+
+		}
+		.flex-cont{
+
+			/*兼容性问题，老的放在前面，新的支持所有*/
+			display:-webkit-box;
+			display:-webkit-flex;
+			display:flex;
+			/*主轴对其方式*/
+		/*纵轴对其方式*/
+		align-items: center;
+
+		}
+		.flex-item{
+			/*手机宽度有限 最主要的元素 加比例  其他元素有width，它占据剩余的宽度*/
+			flex:1;
+			/*background:red;*/
+		}
+		.s-tit{
+			/*高度等于行高，那么文字垂直居中*/
+			/*line-height: 36px;
+			height: 36px;
+			background-color: green;*/
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.s-tit,.s-desc{
+			line-height: 1.2;
+		}
+	.s-img{
+		/*占该占的宽度*/
+		width: 50px;
+		height: 50px;
+		background: #31bbee;
+		margin-right: 5px;
+	}
+	.f-icon{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-color: #31bbee;
+
+	}
+	</style>
+</head>
+<body>
+	<!-- <p>
+		移动端特点  屏幕小交互全靠手  列表高度  45px+  
+		宽度  不能放太多内容 375px  414px 
+
+	</p> -->
+
+
+	<ul>
+		<li>
+			<div class="flex-cont flex-simple">
+				<div class="s-img"></div>
+				<div class="flex-item s-word">
+					<p class="s-tit">title</p>
+					<p class="s-desc">description</p>
+				</div>
+				<!-- <i>斜体标签 -->
+				<i class="f-icon">ss</i>
+			</div>
+
+		</li>
+	</ul>
+
+
+</body>
+</html>

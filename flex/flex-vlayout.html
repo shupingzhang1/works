@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>用flex做垂直弹性布局</title>
+
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+		}
+		/*类名单词，记忆，增加自己词汇量*/
+		.page{
+			/*从父元素继承*/
+			height:100%;
+			/*background-color: red;*/
+		}
+		.flex-cont{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: flex;
+
+			
+		}
+
+		.flex-ver{
+			/*默认水平方向  column  y轴*/
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+		}
+		.nav-box,.btn-box{
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
+		}
+		.flex-item{
+			flex:1;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="flex-cont flex-ver	">
+			<div class="nav-box">title</div>
+			<div class="flex-item">
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+				读书、看电影、涨知识、学穿搭...，加入兴趣小组，获得达人们的高质量生活经验，找到有相同爱好的小伙伴
+
+
+
+			</div>
+			<div class="btn-box">
+				<button class="f-btn">btn</button>
+
+			</div>
+		</div>
+
+
+	</div>
+	
+</body>
+</html>

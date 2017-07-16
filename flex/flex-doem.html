@@ -1,0 +1,218 @@
+<!DOCTYPEaaaaaaaa html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微信首页 弹性布局 仿照</title>
+	<style>
+	*{
+		padding: 0;
+		margin:0;
+
+	}
+	html,body{
+		height: 100%;
+		
+	}
+	.flex-box{
+		height: 100%;
+		
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:flex;
+		font-family: sans-serif;
+	}
+	/*设置主轴方向*/
+	.flex-dir{
+		flex-direction: column;
+
+	}
+	/*上面部分样式*/
+	.top-item{
+		background-color: #000;
+
+	}
+	.center-item{
+		flex:auto;
+		  height: auto;
+		  overflow: scroll;
+		   /*出现滚动条*/
+        /*android chrome  iphone safari
+        webkit*/
+        -webkit-overflow-scrolling: touch;
+
+
+	}
+	.top-item,.buttom-item{
+		height: 90px;
+		
+	}
+	.buttom-item{
+		background-color: #fff;
+
+	}
+
+.fenggexian-item{
+	width: 100%;
+	height: 1px;
+	background-color: #181818;
+}
+	/*最上面的弹性布局样式*/
+	.top-item-flex{
+		width: 100%;
+		
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:flex;
+	}
+	.top-left-item{
+		width: 150px;
+		color: #fff;
+		line-height: 90px;
+		font-size: 30px;
+		margin-left: 15px;
+	}
+	.top-center-item{
+		flex: auto;
+	}
+	.top-buttom-item{
+		width: 100px;
+		/*background-color: red;*/
+		align-self: center;
+
+	}
+
+
+	/*最下面弹性布局样式*/
+	.buttom-item-flex{
+		width: 100%;
+
+		
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:flex;
+		justify-content: space-around;
+		font-size: 20px;
+		text-align: center;
+
+
+	}
+
+	/*中间消息样式*/
+	.center-item-messages-fengexian{
+		background-color: #d8d8d7;
+		height: 1px;
+		width: 100%;
+	}
+	.center-item-massages
+	{
+		width: 100%;
+		height:100px;
+		display:-webkit-box;
+		display:-webkit-flex;
+		display:flex;
+
+	}
+	.center-item-massages-left{
+		width: 100px;
+		/*background-color: red;*/
+		align-self: center;
+
+
+	}
+	.center-item-massages-center{
+		flex: auto;
+		align-self: center;
+	}
+	.center-item-massages-center>p{
+		color: #a8a8a8;
+		font-size: 20px; 
+
+	}
+	.center-item-massages-center>h3{
+		color: #000;
+		font-size: 25px;
+
+	}
+
+	.center-item-massages-right{
+		width: 100px;
+		
+
+	}
+
+
+	
+	</style>
+</head>
+<body>
+	<div class="flex-box flex-dir">
+  		<div class="top-item">
+  			<div class="top-item-flex">
+  				<div class="top-left-item">微信（3）</div>
+  				<div class="top-center-item"></div>
+  				<div class="top-buttom-item">
+					<img src="images/search.png" alt="" class="search-img">
+				</div>
+				<div class="top-buttom-item">
+					<img src="images/add.png" alt="" class="add-img">
+  				</div>
+
+
+
+  			</div>
+
+  		
+
+  		</div>
+  		<div class="center-item">
+  			<div class="center-item-massages">
+				<div class="center-item-massages-left"><img src="images/service.png" alt=""></div>
+				<div class="center-item-massages-center">
+					<h3>腾讯云助手</h3>
+					<p>工单进度通知</p>
+				</div>
+				<div class="center-item-massages-right">
+					<p>6月18日</p>
+
+				</div>
+
+
+  			</div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			<div class="center-item-massages"></div>
+  			<div class="center-item-messages-fengexian"></div>
+  			
+  		</div>
+  		<div class="fenggexian-item">
+  		</div>
+  		<div class="buttom-item">
+  			<div class="buttom-item-flex">
+  				<div class="buttom-item-flex-img"><img src="images/email.png" alt=""><p >微信</p></div>
+  				<div class="buttom-item-flex-img"><img src="images/email.png" alt=""><p>微信</p></div>
+  				<div class="buttom-item-flex-img"><img src="images/email.png" alt=""><p>微信</p></div>
+  				<div class="buttom-item-flex-img"><img src="images/email.png" alt=""><p>微信</p></div>
+
+
+  			</div>
+  				
+
+		
+  		</div>
+	</div>
+	
+</body>
+</html>
