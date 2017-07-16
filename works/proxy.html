@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+		//js具有强大的表现力
+		var xiaoming={//对象字面量 json
+			name:'小明',
+			age:20,
+			status:'单身',
+			sendFlower:function(target){
+				target.reciveFlower(flower,this);
+
+			}
+
+		}
+		var xiaomei={
+
+			name:'小美',
+			reciveFlower:function(flower,sender){
+				console.log(this.name +'收到了'+sender.name+'送的花');
+
+			},
+			//监听小美的心情,心情好再送，
+			listenGoodMood:function(fn){
+				console.log('心情很坏，热水也解决不了问题。');
+				setTimeout(function(){
+					// 可以送花了
+					fn();
+				},3000)
+			}
+
+		}
+		// 小紅做代理?  接口 interface
+		// 對象，具有同樣的方法，就可以被替代調用
+		var xiaohong={
+			name:'小紅',
+			reciveFlower:function(flower,sender){
+				console.log(sender);
+				xiaomei.listenGoodMood(function(){
+					xiaomei.reciveFlower(flower,sender)
+				}
+			);	
+
+
+				// if(sender.name==='小明'){
+				// 	// console.log('啊，我的男神，我覺得是送我的');
+				// 	// console.log('小明，讓我們在一起吧！');
+				// 	console.log('小明，我把你放在心里。');
+				// 	xiaomei.reciveFlower(flower,sender);
+
+				// }else{
+				// 	xiaomei.reciveFlower(flower,sender);
+
+				// }
+
+			}
+		}
+
+		//函数是一等对象
+		function Flower(type,price){//首字母大写，构造类
+
+			this.type=type;
+			this.price=price;
+		}
+		Flower.prototype.buy = function() {
+			console.log(this.type+',请付'+this.price+'元');
+		};
+
+		var flower=new Flower('玫瑰',128);
+		flower.buy();
+
+		xiaoming.sendFlower(xiaohong,xiaoming);
+		
+
+
+
+
+	</script>
+</body>
+</html>
