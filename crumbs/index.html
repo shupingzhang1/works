@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面包屑</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+
+		/*outline 轮廓   像border 但不会改变盒子模型*/
+		outline: none;
+
+		/*user-select 设置手机端*/
+		-webkit-user-select:none;
+		user-select:none;
+
+		-webkit-tap-highlight-color:transparent;
+	}
+	u,li{
+		list-style:none;
+	}
+	a{
+		text-decoration: none;
+	}
+	#crumbs{
+		margin-left: 200px;
+		margin-top: 200px;
+	}
+	#crumbs ul{
+		list-style:none;
+
+	}
+	#crumbs ul li a{
+		float: left;
+		margin-right: 30px;
+		display: inline-block;
+		position: relative;
+		height: 30px;
+		padding: 10px 20px 0px 20px;
+		text-align: center;
+		background: #3498db;
+		color: #fff;
+		font-size: 20px;
+		/*/*圆滑角
+		border-radius: 10px 0 0 10px;*/
+	}
+	/*after 尾元素(加content) 用于清楚浮动 生成向右的箭头 只有样式 没有标签*/
+	#crumbs ul li a:after{
+		content: '';
+		border-left: 20px solid #3498db;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		position: absolute;
+		top:0px;
+		right: -20px;
+
+	}
+	/*选择第一个a 标签*/
+	#crumbs ul li:first-child a{
+
+		border-radius: 10px 0 0 10px;
+
+		
+
+	}
+	#crumbs ul li:last-child a:before{
+		content: '';
+		border-left: 20px solid transparent;
+		border-top: 20px solid #3498db;
+		border-bottom: 20px solid #3498db;
+		position: absolute;
+		top:0;
+		left: -20px;
+		}
+		#crumbs ul li:nth-child(2) a:before{
+		content: '';
+		border-left: 20px solid transparent;
+		border-top: 20px solid #3498db;
+		border-bottom: 20px solid #3498db;
+		position: absolute;
+		top:0;
+		left: -20px;
+		}
+		#crumbs ul li:nth-child(3) a:before{
+		content: '';
+		border-left: 20px solid transparent;
+		border-top: 20px solid #3498db;
+		border-bottom: 20px solid #3498db;
+		position: absolute;
+		top:0;
+		left: -20px;
+		}
+	#crumbs ul li:last-child a:after{
+		display: none;
+	}
+	#crumbs ul li:last-child a{
+		border-radius: 0 10px   10px 0;
+
+	}
+	#crumbs ul li a:hover{
+		background-color: #fa5ba5;
+	}
+	#crumbs ul li a:hover:after{
+		border-left-color: #fa5ba5;
+	}
+	#crumbs ul li a:hover:before{
+		border-top-color: #fa5ba5;
+		border-bottom-color: #fa5ba5;
+
+	}
+	
+
+	</style>
+</head>
+<body>
+
+	<div id="crumbs">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Info</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
